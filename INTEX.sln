@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INTEX", "INTEX\INTEX.csproj", "{5401EE52-0BAF-4345-819E-C612C30E7400}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INTEX", "INTEX\INTEX.csproj", "{7A5F19C3-7946-46B5-849F-CD0E7A5B9799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5401EE52-0BAF-4345-819E-C612C30E7400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5401EE52-0BAF-4345-819E-C612C30E7400}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5401EE52-0BAF-4345-819E-C612C30E7400}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5401EE52-0BAF-4345-819E-C612C30E7400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5F19C3-7946-46B5-849F-CD0E7A5B9799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5F19C3-7946-46B5-849F-CD0E7A5B9799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5F19C3-7946-46B5-849F-CD0E7A5B9799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5F19C3-7946-46B5-849F-CD0E7A5B9799}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5DA6CB12-1668-4B15-B4BB-119244427BA8}
+		SolutionGuid = {25DD2B6C-B1E2-4F10-A9EB-1735C5C90DEE}
 	EndGlobalSection
 EndGlobal
