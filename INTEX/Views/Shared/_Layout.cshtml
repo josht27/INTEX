@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+     
 
 </head>
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
@@ -21,15 +22,15 @@
                         </button>
                         <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span></a>
                     </div>
+
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li> <a href="#about" class="smoothScroll"> About</a></li>
-                            <li> <a href="#services" class="smoothScroll"> Services</a></li>
-                            <li> <a href="#team" class="smoothScroll"> Team</a></li>
-                            <li> <a href="#portfolio" class="smoothScroll"> Portfolio</a></li>
-                            <li> <a href="#blog" class="smoothScroll"> Blog</a></li>
-                            <li> <a href="#contact" class="smoothScroll"> Contact</a></li>
+                            <li> <a href="#top">Home</a></li>                          
+                            <li> <a href="#active_orders">My Active Orders</a></li>
+                            <li> <a href="#past_orders">My Past Orders</a></li>
+                            <li> <a href="#quote">Get a Quote</a></li>
+                            <li> <a href="#contact">Contact</a></li>
+                            <li> <a href="#survey">Survey</a></li>
                         </ul>
                             @Html.Partial("_LoginPartial")
                     </div><!--/.nav-collapse -->
