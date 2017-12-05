@@ -238,6 +238,7 @@
     <Content Include="Content\js\retina.js" />
     <Content Include="Content\js\smoothscroll.js" />
     <Content Include="Content\css\main.css" />
+    <Content Include="Content\img\North_West_Labs.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
