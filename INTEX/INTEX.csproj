@@ -212,9 +212,10 @@
     <Content Include="Content\img\bg\divider3.jpg" />
     <Content Include="Content\img\bg\divider4.jpg" />
     <Content Include="Content\img\bg\divider6.jpg" />
-    <Content Include="Content\img\header_bg.jpg" />
+    <Content Include="Content\img\black-bg.jpg" />
     <Content Include="Content\img\iphone.png" />
     <Content Include="Content\img\macbook.png" />
+    <Content Include="Content\img\NWL.png" />
     <Content Include="Content\img\portfolio\folio01.jpg" />
     <Content Include="Content\img\portfolio\folio02.jpg" />
     <Content Include="Content\img\portfolio\folio03.jpg" />
@@ -224,6 +225,8 @@
     <Content Include="Content\img\portfolio\folio07.jpg" />
     <Content Include="Content\img\portfolio\folio08.jpg" />
     <Content Include="Content\img\portfolio\folio09.jpg" />
+    <Content Include="Content\img\science.jpg" />
+    <Content Include="Content\img\science1.jpg" />
     <Content Include="Content\img\team\team01.jpg" />
     <Content Include="Content\img\team\team02.jpg" />
     <Content Include="Content\img\team\team03.jpg" />

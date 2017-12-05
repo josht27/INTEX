@@ -271,7 +271,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/header_bg.jpg) no-repeat center top;
+	background: url(../img/science1.jpg) no-repeat center top;
 	margin-top: -50px;
 	padding-top:120px;
 	text-align:center;
@@ -349,6 +349,10 @@ a:after {
 
 #footerwrap h4 {
 	color: white;
+}
+
+#bigger-picture {
+    width: 500px;
 }
 
 
@@ -610,6 +614,8 @@ a:after {
 }
 
 
+
+
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
@@ -628,6 +634,7 @@ a:after {
 @media screen and (max-width:769px) {
 	#headerwrap h1 {
 		font-size: 80px;
+        width: 750px;
 	}
 	#headerwrap p {
 		font-size: 30px;

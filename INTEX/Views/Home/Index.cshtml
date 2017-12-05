@@ -12,26 +12,20 @@
     <link rel="stylesheet" href="~/Content/css/icomoon.css">
     <link href="~/Content/css/animate-custom.css" rel="stylesheet">
 
-
-
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
     <script src="~/Content/js/jquery.min.js"></script>
     <script type="text/javascript" src="~/Content/js/modernizr.custom.js"></script>
-
-
 </head>
 
 <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-    <!-- ==== HEADERWRAP ==== -->s
-    <div id="headerwrap" id="top" name="home">
-        <header class="clearfix">
-            <h1><span class="icon icon-shield"></span></h1>
-            <p>A Bootstrap 3 One Page Theme.</p>
-            <p>Exclusive for BlackTie.co.</p>
-        </header>
-    </div><!-- /headerwrap -->
+    <!-- ==== HEADERWRAP ==== -->
+    <header id="headerwrap">
+        <h2><img src="~/Content/img/NWL.png" id="bigger-picture" /></h2>
+        <br />
+        <a href="#contact" class="btn btn-lg btn-info">Request a Quote</a>
+</header>
     <!-- ==== GREYWRAP ==== -->
     <div id="greywrap">
         <div class="row">
@@ -199,9 +193,8 @@
         </div><!-- /row -->
         <div class="container">
             <div class="row">
-
                 <!-- PORTFOLIO IMAGE 1 -->
-                <div class="col-md-6 ">
+                <div class="col-md-12 ">
                     <div class="grid mask">
                         <figure>
                             <img class="img-responsive" src="~/Content/img/portfolio/folio01.jpg" alt="">
@@ -213,14 +206,14 @@
                     </div><!-- /grid-mask -->
                 </div><!-- /col -->
                 <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
-                     a modal for each of your projects. -->
+             a modal for each of your projects. -->
 
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Your Current Orders</h4>
+                                <h4 class="modal-title">Make an Order</h4>
                             </div>
                             <div class="modal-body">
                                 <p><img class="img-responsive" src="~/Content/img/portfolio/folio01.jpg" alt=""></p>
@@ -233,42 +226,78 @@
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
-                <!-- PORTFOLIO IMAGE 2 -->
-                <div class="col-md-6">
-                    <div class="grid mask">
-                        <figure>
-                            <img class="img-responsive" src="~/Content/img/portfolio/folio02.jpg" alt="">
-                            <figcaption>
-                                <h5>Previous Orders</h5>
-                                <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption><!-- /figcaption -->
-                        </figure><!-- /figure -->
-                    </div><!-- /grid-mask -->
-                </div><!-- /col -->
+                <hr>
+                <div class="row">
+                    <!-- PORTFOLIO IMAGE 1 -->
+                    <div class="col-md-6 ">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="~/Content/img/portfolio/folio01.jpg" alt="">
+                                <figcaption>
+                                    <h5>Current Orders</h5>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+                                </figcaption><!-- /figcaption -->
+                            </figure><!-- /figure -->
+                        </div><!-- /grid-mask -->
+                    </div><!-- /col -->
+                    <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+                 a modal for each of your projects. -->
 
-                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title">Your Previous Orders</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p><img class="img-responsive" src="~/Content/img/portfolio/folio01.jpg" alt=""></p>
-                                <p>Yay?</p>
-                                <p><b><a href="#">Visit Site</a></b></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Your Current Orders</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="~/Content/img/portfolio/folio01.jpg" alt=""></p>
+                                    <p>This project was crafted for Some Name corp. Detail here a little about your job requirements and the tools used. Tell about the challenges faced and what you and your team did to solve it.</p>
+                                    <p><b><a href="#">Visit Site</a></b></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                    <!-- PORTFOLIO IMAGE 2 -->
+                    <div class="col-md-6">
+                        <div class="grid mask">
+                            <figure>
+                                <img class="img-responsive" src="~/Content/img/portfolio/folio02.jpg" alt="">
+                                <figcaption>
+                                    <h5>Previous Orders</h5>
+                                    <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Take a Look</a>
+                                </figcaption><!-- /figcaption -->
+                            </figure><!-- /figure -->
+                        </div><!-- /grid-mask -->
+                    </div><!-- /col -->
 
-            <br>
-            <br>
+                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Your Previous Orders</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img class="img-responsive" src="~/Content/img/portfolio/folio01.jpg" alt=""></p>
+                                    <p>Yay?</p>
+                                    <p><b><a href="#">Visit Site</a></b></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                </div>
+            </div>
+                    <br>
+                    <br>
         </div><!-- /row -->
-    </div><!-- /container -->
+     </div><!-- /container -->
     <!-- ==== SECTION DIVIDER4 ==== -->
     <section class="section-divider textdivider divider4">
         <div class="container">
