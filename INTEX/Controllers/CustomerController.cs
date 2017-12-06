@@ -13,5 +13,10 @@ namespace INTEX.Controllers
         {
             return View();
         }
+
+        public ActionResult Trial()
+        {
+            return View();
+        }
     }
 }
