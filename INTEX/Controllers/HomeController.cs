@@ -26,5 +26,12 @@ namespace INTEX.Controllers
 
             return View();
         }
+
+        public ActionResult Calendar()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }
