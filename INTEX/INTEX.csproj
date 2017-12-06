@@ -213,8 +213,14 @@
     <Content Include="Content\img\bg\divider3.jpg" />
     <Content Include="Content\img\bg\divider4.jpg" />
     <Content Include="Content\img\bg\divider6.jpg" />
+    <Content Include="Content\img\bg\seattle-bg.jpg" />
+    <Content Include="Content\img\bg\seattle-night-wallpaper-background-20316-20891-hd-wallpapers.jpg" />
     <Content Include="Content\img\black-bg.jpg" />
+    <Content Include="Content\img\grey-lab-cropped.gif" />
+    <Content Include="Content\img\insights_lab_equipment.gif" />
     <Content Include="Content\img\iphone.png" />
+    <Content Include="Content\img\lab_experiment.gif" />
+    <Content Include="Content\img\lab_header_v2.gif" />
     <Content Include="Content\img\macbook.png" />
     <Content Include="Content\img\NWL.png" />
     <Content Include="Content\img\portfolio\folio01.jpg" />
@@ -228,6 +234,8 @@
     <Content Include="Content\img\portfolio\folio09.jpg" />
     <Content Include="Content\img\science.jpg" />
     <Content Include="Content\img\science1.jpg" />
+    <Content Include="Content\img\single-flask-cropped.gif" />
+    <Content Include="Content\img\single-flask.gif" />
     <Content Include="Content\img\team\team01.jpg" />
     <Content Include="Content\img\team\team02.jpg" />
     <Content Include="Content\img\team\team03.jpg" />

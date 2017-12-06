@@ -437,7 +437,7 @@ a:after {
 }
 
 .divider6 {
-	background-image: url('../img/bg/divider6.jpg')
+	background-image: url('../img/bg/seattle-bg.jpg')
 }
 
 
@@ -646,3 +646,6 @@ a:after {
 	}
 }
 
+.center-text {
+    text-align: center;
+}
