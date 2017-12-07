@@ -5210,6 +5210,11 @@ button.close {
     width: 100%;
     margin: 30px auto;
   }
+
+  .modal-tracking{
+    width: 600px;
+    margin: 30px auto;
+  }
 }
 .tooltip {
   position: absolute;
