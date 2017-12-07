@@ -1,127 +1,284 @@
-﻿<html>
-<head>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font: 400 15px/1.8 "Lato", sans-serif;
-            color: #777;
+﻿<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f1f1f1;
+    }
+
+    #regForm {
+        background-color: #ffffff;
+        margin: 100px auto;
+        font-family: Raleway;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+    }
+
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+            background-color: #ffdddd;
+        }
+
+    /* Hide all steps by default: */
+    .tab {
+        display: none;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    #prevBtn {
+        background-color: #bbbbbb;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+    }
+
+        .step.active {
+            opacity: 1;
+        }
+
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+            background-color: #4CAF50;
         }
 
 
-
-        .bgimg-1, .bgimg-2, .bgimg-3 {
-            position: relative;
-            opacity: 0.65;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .bgimg-1 {
-            background-image: url('../../Content/img/macbook.png');
-            min-height: 100%;
-        }
-
-
-
-        .bgimg-2 {
-            background-image: url('../../Content/img/black-bg.jpg');
-            min-height: 400px;
-        }
-
-
-
-        .bgimg-3 {
-            background-image: url('../../Content/img/macbook.png');
-            min-height: 400px;
-        }
-
-
-
-        .caption {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            width: 100%;
-            text-align: center;
-            color: #000;
-        }
-
-
-
-            .caption span.border {
-                background-color: #111;
-                color: #fff;
-                padding: 18px;
-                font-size: 25px;
-                letter-spacing: 10px;
-            }
-
-
-
-        h3 {
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            font: 20px "Lato", sans-serif;
-            color: #111;
-        }
-
-
-
-        /* Turn off parallax scrolling for tablets and phones */
-
-        @@media only screen and (max-device-width: 1024px) {
-
-            .bgimg-1, .bgimg-2, .bgimg-3 {
-                background-attachment: scroll;
-            }
-        }
-    </style>
-</head>
-
+</style>
 <body>
-    <div class="bgimg-1">
-        <div class="caption">
-            <span class="border">SCROLL DOWN</span>
+
+    <form id="regForm" action="/action_page.php">
+        <h1>New Orders</h1>
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">
+            <p>Compound Name:</p>
+            <p><input placeholder="Compound name..." oninput="this.className = ''" name="fname"></p>
+            <p>Describe the Compound:</p>
+            <p><input placeholder="Compound Description..." oninput="this.className = ''" name="lname"></p>
+            <p>Quantity</p>
+            <p><input placeholder="Quantity..." oninput="this.className = ''" name="lname"></p>
+
+        </div>
+
+        <div class="tab">
+            <h1 class="text-center">Select Your Test(s)</h1>
+            <div class="container">
+                
+                <br />
+                <div class="col-md-3">
+                    <select name="cars" multiple>
+                        <option value="volvo">Biochemical Pharmacology (BP)</option>
+                        <option value="saab">DiscoveryScreen (DS)</option>
+                        <option value="opel">ImmunoScreen (IS)</option>
+                        <option value="audi">ProfilingScreen (PF)</option>
+                        <option value="audi">PharmaScreen (PS)</option>
+                        <option value="audi">CustomScreen (CS)</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <p>PC USERS: In order to select multiple tests, please press and hold <br />CRTL while clicking on your tests.</p>
+                    <br />
+                    <p>MAC USERS: In order to select multiple tests, please press and hold <br />CMD while clicking on your tests. </p>
+                </div>
+                <br />
+            </div>
+         </div>
+       
+<div class="tab">
+    <h1 class="text-center">Date Test is Due</h1>
+    <div class="container">
+        <div class="row">   
+            <div class="col-md-3">
+
+                
+                <br />
+                <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+                <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+                <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+             </div>
+            <div class="col-md-6">
+             
+                <br />
+                <input type="checkbox" name="vehicle" value="Bike"><br>
+                <input type="checkbox" name="vehicle" value="Car">I have a car
+            </div>
         </div>
     </div>
+</div>
+<div class="tab">
+    <h1 class="text-center">Any additional comments:</h1>
 
-    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-        <h3 style="text-align:center;">Parallax Demo</h3>
-        <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
+    
+    <textarea name="message" style="width:600px; height:200px">
+        The cat was playing in the garden.
+    </textarea>
+</div>
+<div style="overflow:auto;">
+    <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
     </div>
+</div>
+<!-- Circles which indicates the steps of the form: -->
+<div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+</div>
+    </form>
 
-    <div class="bgimg-2">
-        <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
-        </div>
-    </div>
+<script>
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the crurrent tab
 
-    <div style="position:relative;">
-        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-        </div>
-    </div>
+    function showTab(n) {
+        // This function will display the specified tab of the form...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        //... and fix the Previous/Next buttons:
+        if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+        } else {
+            document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+        } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        //... and run a function that will display the correct step indicator:
+        fixStepIndicator(n)
+    }
 
-    <div class="bgimg-3">
-        <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
-        </div>
-    </div>
+    function nextPrev(n) {
 
-    <div style="position:relative;">
-        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-        </div>
-    </div>
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form...
+        if (currentTab >= x.length) {
+            // ... the form gets submitted:
+            
+            return false
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+    }
 
-    <div class="bgimg-1">
-        <div class="caption">
-            <span class="border">COOL!</span>
-        </div>
-    </div>
+    function validateForm() {
+        // This function deals with validation of the form fields
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+            // If a field is empty...
+            if (y[i].value == "") {
+                // add an "invalid" class to the field:
+                y[i].className += " invalid";
+                // and set the current valid status to false
+                valid = false;
+            }
+        }
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid; // return the valid status
+    }
 
+    function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class on the current step:
+        x[n].className += " active";
+    }
+</script>
 </body>
 </html>
+
+
+<!--<style>
+
+</style>
+
+
+<body>
+
+    <h1>Custom Radio Buttons</h1>
+    <div class="container">
+
+
+    <label ="container">
+            One
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <label class="container">
+        Two
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+
+    <label class="container">
+        Three
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+
+    <label class="container">
+        Four
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+    </label>
+
+</body>
+    -->
