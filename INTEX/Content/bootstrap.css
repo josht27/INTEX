@@ -1746,7 +1746,6 @@ input[type="date"] {
 }
 .radio,
 .checkbox {
-  display: block;
   min-height: 20px;
   padding-left: 20px;
   margin-top: 10px;
@@ -5175,6 +5174,11 @@ button.close {
   position: relative;
   padding: 20px;
 }
+
+.modal-body p{
+
+}
+
 .modal-footer {
   padding: 19px 20px 20px;
   margin-top: 15px;
@@ -5210,9 +5214,12 @@ button.close {
     width: 100%;
     margin: 30px auto;
   }
-
   .modal-tracking{
     width: 600px;
+    margin: 30px auto;
+  }
+  .modal-order {
+    width: 650px;
     margin: 30px auto;
   }
 }
