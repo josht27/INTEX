@@ -5193,7 +5193,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 900px;
     margin: 30px auto;
   }
   .modal-content {
@@ -5201,10 +5201,10 @@ button.close {
             box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
   }
   .modal-sm {
-    width: 300px;
+    width: 500px;
   }
   .modal-lg {
-    width: 900px;
+    width: 1100px;
   }
   .modal-custom {
     width: 100%;
