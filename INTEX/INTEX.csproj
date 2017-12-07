@@ -191,6 +191,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -215,13 +216,11 @@
     <Content Include="Content\img\bg\divider6.jpg" />
     <Content Include="Content\img\bg\seattle-bg.jpg" />
     <Content Include="Content\img\bg\seattle-night-wallpaper-background-20316-20891-hd-wallpapers.jpg" />
-    <Content Include="Content\img\black-bg.jpg" />
+    <Content Include="Content\img\calendar.gif" />
     <Content Include="Content\img\grey-lab-cropped.gif" />
     <Content Include="Content\img\insights_lab_equipment.gif" />
-    <Content Include="Content\img\iphone.png" />
     <Content Include="Content\img\lab_experiment.gif" />
     <Content Include="Content\img\lab_header_v2.gif" />
-    <Content Include="Content\img\macbook.png" />
     <Content Include="Content\img\NWL.png" />
     <Content Include="Content\img\portfolio\folio01.jpg" />
     <Content Include="Content\img\portfolio\folio02.jpg" />
@@ -232,10 +231,12 @@
     <Content Include="Content\img\portfolio\folio07.jpg" />
     <Content Include="Content\img\portfolio\folio08.jpg" />
     <Content Include="Content\img\portfolio\folio09.jpg" />
+    <Content Include="Content\img\quote.gif" />
     <Content Include="Content\img\science.jpg" />
     <Content Include="Content\img\science1.jpg" />
     <Content Include="Content\img\single-flask-cropped.gif" />
     <Content Include="Content\img\single-flask.gif" />
+    <Content Include="Content\img\skillsoft_icon_quote.gif" />
     <Content Include="Content\img\team\team01.jpg" />
     <Content Include="Content\img\team\team02.jpg" />
     <Content Include="Content\img\team\team03.jpg" />
@@ -318,6 +319,7 @@
     <Content Include="Views\Home\Calendar.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Trial.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5206,6 +5206,10 @@ button.close {
   .modal-lg {
     width: 900px;
   }
+  .modal-custom {
+    width: 100%;
+    margin: 30px auto;
+  }
 }
 .tooltip {
   position: absolute;

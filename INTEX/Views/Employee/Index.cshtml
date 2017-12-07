@@ -1,0 +1,213 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/css/icomoon.css">
+    <link href="~/Content/css/animate-custom.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+    </style>
+
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/modernizr.custom.js"></script>
+</head>
+
+<!-- ==== PORTFOLIO ==== -->
+<div class="container" id="contact" name="contact">
+    <br>
+    <h1 class="centered">Your Orders</h1>
+    <hr>
+    <br>
+
+    <div class="row">
+
+        <!-- PORTFOLIO IMAGE 1 -->
+        <div class="col-md-4 ">
+            <div class="grid mask">
+                <figure>
+                    <img class="img-responsive" src="~/Content/img/calendar.gif" alt="">
+                    <figcaption>
+                        <h5>Test Schedule</h5>
+                        <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">View Calendar</a>
+                    </figcaption><!-- /figcaption -->
+                </figure><!-- /figure -->
+            </div><!-- /grid-mask -->
+        </div><!-- /col -->
+        <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+        a modal for each of your projects. -->
+
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-custom">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Test Schedule</h4>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://docs.google.com/spreadsheets/d/1hctiwy1m4iV0pTQM8Z8xv0a1ZpPgG6rW8HiIdqD3rr0/edit?usp=sharing" class="iframe"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!-- PORTFOLIO IMAGE 2 -->
+        <div class="col-md-4">
+            <div class="grid mask">
+                <figure>
+                    <img class="img-responsive" src="~/Content/img/skillsoft_icon_quote.gif" alt="">
+                    <figcaption>
+                        <h5>Quotes</h5>
+                        <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-lg">View Quote Requests</a>
+                    </figcaption><!-- /figcaption -->
+                </figure><!-- /figure -->
+            </div><!-- /grid-mask -->
+        </div><!-- /col -->
+        <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+        a modal for each of your projects. -->
+
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Quote Requests</h4>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!-- PORTFOLIO IMAGE 3 -->
+        <div class="col-md-4">
+            <div class="grid mask">
+                <figure>
+                    <img class="img-responsive" src="~/Content/img/grey-lab-cropped.gif" alt="">
+                    <figcaption>
+                        <h5>Update Orders</h5>
+                        <a data-toggle="modal" href="#myModal3" class="btn btn-primary btn-lg">View Orders</a>
+                    </figcaption><!-- /figcaption -->
+                </figure><!-- /figure -->
+            </div><!-- /grid-mask -->
+        </div><!-- /col -->
+        <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+        a modal for each of your projects. -->
+
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Orders Assigned to You</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!--Order Number, Date Test Submitted, Assay-->
+                        <br>
+                        <div id="demo" class="collapse">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Work Order Recieved</h5>
+                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Materials Received</h5>
+                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Testing in Progress</h5>
+                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Testing is Complete</h5>
+                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+
+                        <script>
+                            function changeMe(oImg) {
+                                if (oImg.className == 'img1 & img-responsive') {
+                                    oImg.className = 'color & img-responsive';
+                                } else {
+                                    oImg.className = 'img1 & img-responsive';
+                                }
+                            }
+                        </script>
+
+                        <table>
+                            <tr>
+                                <th>Order Number</th>
+                                <th>Date Test Submitted</th>
+                                <th>Assay ID</th>
+                                <th>Check Your Current Status</th>
+                            </tr>
+                            <tr>
+                                <td>#1234</td>
+                                <td>12/01/17</td>
+                                <td>50</td>
+                                <td><button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo">Update Status</button></td>
+                            </tr>
+                            <tr>
+                                <td>#1235</td>
+                                <td>12/04/17</td>
+                                <td>94</td>
+                                <td><button type="button" class="btn btn-info btn-block" " data-toggle="collapse" data-target="#demo">Update Status</button></td>
+                            </tr>
+                            <tr>
+                                <td>#1236</td>
+                                <td>12/07/17</td>
+                                <td>67</td>
+                                <td><button type="button" class="btn btn-info btn-block" " data-toggle="collapse" data-target="#demo">Update Status</button></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </div><!--row-->
+</div><!--container-->
+
