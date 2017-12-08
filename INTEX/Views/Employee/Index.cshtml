@@ -50,13 +50,13 @@
     <div class="row">
 
         <!-- PORTFOLIO IMAGE 1 -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="grid mask">
                 <figure>
                     <img class="img-responsive" src="~/Content/img/calendar.gif" alt="">
                     <figcaption>
                         <h5>Test Schedule</h5>
-                        <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">View sCalendar</a>
+                        <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">View Calendar</a>
                     </figcaption><!-- /figcaption -->
                 </figure><!-- /figure -->
             </div><!-- /grid-mask -->
@@ -80,9 +80,8 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
         <!-- PORTFOLIO IMAGE 2 -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="grid mask">
                 <figure>
                     <img class="img-responsive" src="~/Content/img/lab_experiment.gif" alt="">
@@ -303,26 +302,197 @@
 
                     <div class="modal-body">
                         <!--Order Number, Date Test Submitted, Assay-->
-                        
-                            <div class="row">
-                                <h1 class="text-center">Test #1236</h1>
-                            </div>
-                            <h6 class="text-center" >Update price to: <input class="text-center" type="text" id="fname" name="firstname" placeholder="Price change" onclick="update_complete()"><button onclick="update_price()">Submit</button></h6> 
-                            <p id="priceupdate" class="text-center"></p>
-                            </div>
-     
-                    </div><!-- /.modal-content -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="show_me()" >Close</button>
-                    </div>
-                
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal -->
-        </div>
-           
 
+                        <div class="row">
+                            <h1 class="text-center">Test #1236</h1>
+                        </div>
+                        <h6 class="text-center">Update price to: <input class="text-center" type="text" id="fname" name="firstname" placeholder="Price change" onclick="update_complete()"><button onclick="update_price()">Submit</button></h6>
+                        <p id="priceupdate" class="text-center"></p>
+                    </div>
+
+                </div><!-- /.modal-content -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="show_me()">Close</button>
+                </div>
+
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- PORTFOLIO IMAGE 1 -->
+
+        <div class="col-md-4 text">
+            <div class="grid mask">
+                <figure>
+                    <img class="img-responsive" src="~/Content/img/calendar.gif" alt="">
+                    <figcaption>
+                        <h5>Test Schedule</h5>
+                        <a data-toggle="modal" href="#myModal4" class="btn btn-primary btn-lg">Generate Report</a>
+                    </figcaption><!-- /figcaption -->
+                </figure><!-- /figure -->
+            </div><!-- /grid-mask -->
+        </div><!-- /col -->
+        <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+        a modal for each of your projects. -->
+        <div class="row">
+            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Report Generator</h4>
+                        </div>
+                        <div class="modal-body">
+                        <div class="container">
+                            <style>
+                                * {
+                                    box-sizing: border-box;
+                                }
+
+                                input[type=text], select, textarea {
+                                    width: 100%;
+                                    padding: 12px;
+                                    border: 1px solid #ccc;
+                                    border-radius: 4px;
+                                    box-sizing: border-box;
+                                    resize: vertical;
+                                }
+
+                                label {
+                                    padding: 12px 12px 12px 0;
+                                    display: inline-block;
+                                }
+
+                                input[type=submit] {
+                                    background-color: #4CAF50;
+                                    color: white;
+                                    padding: 12px 20px;
+                                    border: none;
+                                    border-radius: 4px;
+                                    cursor: pointer;
+                                    float: right;
+                                }
+
+                                    input[type=submit]:hover {
+                                        background-color: #45a049;
+                                    }
+
+                                .col-25 {
+                                    float: left;
+                                    width: 25%;
+                                    margin-top: 6px;
+                                }
+
+                                .col-75 {
+                                    float: left;
+                                    width: 75%;
+                                    margin-top: 6px;
+                                }
+
+                                /* Clear floats after the columns */
+                                .row:after {
+                                    content: "";
+                                    display: table;
+                                    clear: both;
+                                }
+
+                                /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                                @@media (max-width: 600px) {
+                                    .col-25, .col-75, input[type=submit] {
+                                        width: 100%;
+                                        margin-top: 0;
+                                    }
+                                }
+                            </style>
+                    
+                          
+
+                                <h2>Reports</h2>
+                                <h3>Filters</h3>
+
+                            <div class="container">
+                                <form action="/action_page.php">
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="company">Company</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <select id="country" name="country">
+                                                <option value="placeholder">--- Company Name ---</option>
+                                                <option value="1">Cooksey</option>
+                                                <option value="2">Scienuvo</option>
+                                                <option value="3">Aonomy</option>
+                                                <option value="4">Elemensis</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="start">Start Date</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="start" name="startdate" placeholder="MM/YYYY">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="end">End Date</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="end" name="enddate" placeholder="MM/YYYY">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="type">Test Type</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <select id="type" name="testtype">
+                                                <option value="placeholder">--- Test Name ---</option>
+                                                <option value="1">Biochemical Pharmacology</option>
+                                                <option value="2">DiscoveryScreen</option>
+                                                <option value="3">ImmunoScreen</option>
+                                                <option value="4">ProfilingScreen</option>
+                                                <option value="5">PharmaScreen</option>
+                                                <option value="6">CustomScreen</option>
+                                                <option value="all">ALL</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="cost">Cost Range</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="cost" name="testcost" placeholder="Cost Range (ex. 100-300)">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-25">
+                                            <label for="end">Order Number (optional)</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input type="text" id="order" name="ordernumber" placeholder="ex. 143567">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                       <a class="btn btn-success btn-med"  href="~/Content/img/Northwest_Previous_Report.pdf" target="_blank">Generate Report</a>
+                                    </div>
+                                </form>
+                            </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+
+</div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
     </div><!--row-->
-</div><!--container-->
+    <!---</div><!--container-->
+
+
+        </div>
+
 
 
 
