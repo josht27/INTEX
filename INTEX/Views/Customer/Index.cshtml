@@ -1,10 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Customer Portal";
 }
-
-
-
-
 
 <html lang="en">
 <head>
@@ -134,9 +130,12 @@
             <hr>
 
             <div class="row">
+                <div class="col-md-1">
+
+                </div>
                 <!-- PORTFOLIO IMAGE 1 -->
-                <div class="col-md-6 ">
-                    <h2 class="text-center">Get Quotes</h2>
+                <div class="col-md-5">
+                    <h3 class="text-center">Get Quotes</h3>
                     <div class="grid mask">
                         <figure>
                             <img class="img-responsive" src="~/Content/img/quote.gif" alt="">
@@ -161,7 +160,7 @@
                                 <div class="container-fluid">
                                     <form id="regForm">
                                         <!-- One "tab" for each step in the form: -->
-                                        <div class="tab center-block text-center">
+                                        <div class="tab1 center-block text-center">
                                             <h1>Compound Information</h1>
                                             <hr>
                                             <br>
@@ -171,7 +170,7 @@
                                             <p><input placeholder="Quantity..." oninput="this.className = ''" name="lname"></p>
                                         </div>
 
-                                        <div class="tab">
+                                        <div class="tab1">
                                             <h1 class="text-center">Select Your Test(s)</h1>
                                             <hr>
                                             <br>
@@ -194,23 +193,7 @@
                                             <br>
                                         </div>
 
-                                        <div class="tab center-block text-center">
-                                            <h1 class="text-center">Date Test is Due</h1>
-                                            <hr>
-                                            <br>
-
-                                            <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
-                                            <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-                                            <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
-                                            <select>
-                                                <option value="no">Not Expedited</option>
-                                                <option value="yes">Expedited</option>
-                                            </select>
-                                            <br>
-                                            <br>
-                                        </div>
-
-                                        <div class="tab center-block text-center">
+                                        <div class="tab1 center-block text-center">
                                             <h1 class="text-center">Additional Comments:</h1>
                                             <hr>
                                             <br>
@@ -219,30 +202,14 @@
                                             <br>
                                         </div>
 
-                                        <div class="tab">
+                                        <div class="tab1">
                                             <hr>
                                             <br>
-                                            <h1 class="text-center">Thank you for your order!</h1>
+                                            <h1 class="text-center">Thank you for your business!</h1>
+                                            <h5 class="text-center">Your quote will be emailed to you within 2-3 business days.</h5>
                                             <br>
                                             <hr>
                                             <br>
-                                        </div>
-
-
-                                        <div id="trial" style="overflow:auto;">
-                                            <div style="float:right;">
-                                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                                            </div>
-                                        </div>
-
-
-                                        <!-- Circles which indicates the steps of the form: -->
-                                        <div style="text-align:center;margin-top:40px;">
-                                            <span class="step"></span>
-                                            <span class="step"></span>
-                                            <span class="step"></span>
-                                            <span class="step"></span>
                                         </div>
                                     </form>
                                 </div>
@@ -255,13 +222,13 @@
                 </div><!-- /.modal -->
 
                 <!-- PORTFOLIO IMAGE 2 -->
-                <div class="col-md-6 ">
-                    <h2 class="text-center">New Order</h2>
+                <div class="col-md-5">
+                    <h3 class="text-center">New Order</h3>
                     <div class="grid mask">
                         <figure>
                             <img class="img-responsive" src="~/Content/img/insights_lab_equipment.gif" alt="">
                             <figcaption>
-                                <h5>Create New Order</h5>
+                                <h5>Submit an Order</h5>
                                 <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-lg">Get Started</a>
                             </figcaption><!-- /figcaption -->
                         </figure><!-- /figure -->
@@ -346,24 +313,22 @@
                                             <hr>
                                             <br>
                                         </div>
-
-
-                                        <div id="trial" style="overflow:auto;">
-                                            <div style="float:right;">
-                                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                                            </div>
-                                        </div>
-
-
-                                        <!-- Circles which indicates the steps of the form: -->
-                                        <div style="text-align:center;margin-top:40px;">
-                                            <span class="step"></span>
-                                            <span class="step"></span>
-                                            <span class="step"></span>
-                                            <span class="step"></span>
-                                        </div>
                                     </form>
+
+                                    <div id="trial" style="overflow:auto;">
+                                        <div style="float:right;">
+                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Circles which indicates the steps of the form: -->
+                                    <div style="text-align:center;margin-top:40px;">
+                                        <span class="step"></span>
+                                        <span class="step"></span>
+                                        <span class="step"></span>
+                                        <span class="step"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -372,20 +337,23 @@
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
-            </div><!--row-->
-            <br>
-            <hr>
+                <div class="col-md-1">
 
-            
-            <!-- PORTFOLIO IMAGE 3 -->
+                </div>
+            </div>
+
             <div class="row">
-            <div class="col-md-6 ">
-                <h2 class="text-center">Check Current Order</h2>
+            <!-- PORTFOLIO IMAGE 3 -->
+                <div class="col-md-1">
+
+                </div>
+            <div class="col-md-5">
+                <h3 class="text-center">Current Orders</h3>
                 <div class="grid mask">
                     <figure>
                         <img class="img-responsive" src="~/Content/img/grey-lab-cropped.gif" alt="">
                         <figcaption>
-                            <h5>Current Orders</h5>
+                            <h5>Your Current Orders</h5>
                             <a data-toggle="modal" href="#myModal3" class="btn btn-primary btn-lg">Look At Your Orders</a>
                         </figcaption><!-- /figcaption -->
                     </figure><!-- /figure -->
@@ -409,22 +377,22 @@
                                     <h1>Test #1234</h1>
                                     <div class="col-md-3">
                                         <h5 class="text-center">Work Order Recieved</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img3 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Materials Received</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Testing in Progress</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-cropped.gif" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Testing is Complete</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
                                 </div>
                                 <br>
@@ -435,22 +403,22 @@
                                     <h1>Test #1235</h1>
                                     <div class="col-md-3">
                                         <h5 class="text-center">Work Order Recieved</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Materials Received</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-cropped.gif" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Testing in Progress</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img3 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Testing is Complete</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
                                 </div>
                                 <br>
@@ -461,22 +429,22 @@
                                     <h1>Test #1236</h1>
                                     <div class="col-md-3">
                                         <h5 class="text-center">Work Order Recieved</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-cropped.gif" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Materials Received</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Testing in Progress</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
 
                                     <div class="col-md-3">
                                         <h5 class="text-center">Testing is Complete</h5>
-                                        <img src="~/Content/img/single-flask-cropped.gif" class="img3 & img-responsive" />
+                                        <img src="~/Content/img/single-flask-bw.png" class="img-responsive" />
                                     </div>
                                 </div>
                                 <br>
@@ -520,8 +488,8 @@
             </div><!-- /.modal -->
 
             <!-- PORTFOLIO IMAGE 4 -->
-            <div class="col-md-6">
-                <h2 class="text-center">Invoices & Results </h2>
+            <div class="col-md-5">
+                <h3 class="text-center">Invoices & Results </h3>
                 <div class="grid mask">
                     <figure>
                         <img class="img-responsive" src="~/Content/img/lab_header_v2.gif" alt="">
@@ -534,7 +502,7 @@
             </div><!-- /col -->
 
             <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-medium">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -545,8 +513,8 @@
                                 <tr>
                                     <th>Order Number</th>
                                     <th>Date Finished</th>
-                                    <th>Cost</th>
-                                    <th>Invoice Paid?</th>
+                                    <th>Assay ID</th>
+                                    <th>Amount Paid</th>
                                     <th>Download Invoice</th>
                                     <th>Download Results</th>
                                 </tr>
@@ -583,6 +551,9 @@
                     </div><!-- /.modal-content -->
                 </div><!-- /.modal-dialog -->
             </div><!-- /.modal -->
+            <div class="col-md-1">
+
+            </div>
             </div><!--row-->
         </div><!--container-->
 
@@ -618,16 +589,16 @@
                             <input type="text" id="fname" name="firstname" placeholder="First Name">
 
                             <input type="text" id="lname" name="lastname" placeholder="Last Name">
-                            <br />
+                            <br /><br />
                             <input type="tel" id="phone" name="phone" placeholder="Phone" style="width:100%;">
 
                             <input type="email" id="email" name="email" placeholder="Your Email" style="width:100%;">
-                            <br />
+                            <br /><br />
                             </form>
                         <form>
                             <textarea id="subject" name="subject" placeholder="Your Account Number(s)..." style="height:200px; width:200%"></textarea>
                             <textarea id="subject" name="subject" placeholder="Your comments..." style="height:200px; width:200%"></textarea>
-                            <br />
+                            <br /><br />
                             <input class="text-center" type="submit" value="Submit" >
                    
                     </form>
