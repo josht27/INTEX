@@ -192,6 +192,7 @@
                                             <h1 class="text-center">Date Test is Due</h1>
                                             <hr>
                                             <br>
+
                                             <p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
                                             <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
                                             <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
@@ -590,58 +591,7 @@
                 <p>There’s more to design than meets the eye. It’s when it meets the heart that design creates a meaningful, lasting connection with the audience.</p>
             </div><!-- container -->
         </section><!-- section -->
-        <!-- ==== BLOG ==== -->
-        <div class="container" id="survey" name="survey">
-            <br>
-            <div class="row">
-                <br>
-                <h1 class="centered">WE ARE STORYTELLERS</h1>
-                <hr>
-                <br>
-                <br>
-            </div><!-- /row -->
-
-            <div class="row">
-                <div class="col-lg-6 blog-bg">
-                    <div class="col-lg-4 centered">
-                        <br>
-                        <p><img class="img img-circle" src="~/Content/img/team/team04.jpg" width="60px" height="60px"></p>
-                        <h4>Jaye Smith</h4>
-                        <h5>Published Aug 30.</h5>
-                        
-                    </div>
-                    <div class="col-lg-8 blog-content">
-                        <h2>We Define Success</h2>
-                        <p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-                        <p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client’s brand.</p>
-                        <p><a href="#" class="icon icon-link"> Read More</a></p>
-                        <br>
-                    </div>
-                </div><!-- /col -->
-
-                <div class="col-lg-6 blog-bg">
-                    <div class="col-lg-4 centered">
-                        <br>
-                        <p>
-                            <img class="img img-circle" src="~/Content/img/team/team03
-                            " width="60px" height="60px">
-                        </p>
-                        <h4>Michele Lampa</h4>
-                        <h5>Published Aug 28.</h5>
-                    </div>
-                    <div class="col-lg-8 blog-content">
-                        <h2>A Beautiful Story</h2>
-                        <p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-                        <p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client’s brand.</p>
-                        <p><a href="#" class="icon icon-link"> Read More</a></p>
-                        <br>
-                    </div>
-                </div><!-- /col -->
-            </div><!-- /row -->
-            <br>
-            <br>
-        </div><!-- /container -->
-
+        
         <!-- ==== SECTION DIVIDER6 ==== -->
         <section class="section-divider textdivider divider6">
             <div class="container">
@@ -700,6 +650,7 @@
         <script type="text/javascript" src="~/Content/js/jquery-func.js"></script>
     <script>
         var currentTab = 0; // Current tab is set to be the first tab (0)
+       
         showTab(currentTab); // Display the crurrent tab
 
         function showTab(n) {
@@ -763,6 +714,11 @@
                     // and set the current valid status to false
                     valid = false;
                 }
+               /* while (x == 2) {    
+                    
+                    if (y[i] != RegExp("[0-9]") )             
+                        {valid = false;}
+                        }*/
             }
             // If the valid status is true, mark the step as finished and valid:
             if (valid) {
@@ -781,87 +737,7 @@
             x[n].className += " active";
         }
 
-        var currentTab = 0; // Current tab is set to be the first tab (0)
-        showTab(currentTab); // Display the crurrent tab
-
-        function showTab(n) {
-            // This function will display the specified tab of the form...
-            var x = document.getElementsByClassName("tab");
-            x[n].style.display = "block";
-            //... and fix the Previous/Next buttons:
-            if (n == 0) {
-                document.getElementById("prevBtn").style.display = "none";
-            } else {
-                document.getElementById("prevBtn").style.display = "inline";
-            }
-            if (n == (x.length - 2)) {
-                document.getElementById("nextBtn").innerHTML = "Submit";
-                
-            }
-            else if (n == (x.length - 1)) {
-            }
-            else {
-                document.getElementById("nextBtn").innerHTML = "Next";
-            }
-            //... and run a function that will display the correct step indicator:
-            fixStepIndicator(n)
-        }
-
-        function nextPrev(n) {
-            var url = '@Url.Content("~/Customer/Index")' 
-            
-            // This function will figure out which tab to display
-            var x = document.getElementsByClassName("tab");
-            // Exit the function if any field in the current tab is invalid:
-            if (n == 1 && !validateForm()) return false;
-            // Hide the current tab:
-            x[currentTab].style.display = "none";
-            // Increase or decrease the current tab by 1:
-            currentTab = currentTab + n;
-            // if you have reached the end of the form...
-            if (currentTab == x.length - 1) {
-                document.getElementById("trial").style.display = "none";
-            }
-            else if (currentTab >= x.length) {
-                // ... the form gets submitted:
-                window.location.href = url;
-                return false
-            }
-            // Otherwise, display the correct tab:
-            showTab(currentTab);
-        }
-
-        function validateForm() {
-            // This function deals with validation of the form fields
-            var x, y, i, valid = true;
-            x = document.getElementsByClassName("tab");
-            y = x[currentTab].getElementsByTagName("input");
-            // A loop that checks every input field in the current tab:
-            for (i = 0; i < y.length; i++) {
-                // If a field is empty...
-                if (y[i].value == "") {
-                    // add an "invalid" class to the field:
-                    y[i].className += " invalid";
-                    // and set the current valid status to false
-                    valid = false;
-                }
-            }
-            // If the valid status is true, mark the step as finished and valid:
-            if (valid) {
-                document.getElementsByClassName("step")[currentTab].className += " finish";
-            }
-            return valid; // return the valid status
-        }
-
-        function fixStepIndicator(n) {
-            // This function removes the "active" class of all steps...
-            var i, x = document.getElementsByClassName("step");
-            for (i = 0; i < x.length; i++) {
-                x[i].className = x[i].className.replace(" active", "");
-            }
-            //... and adds the "active" class on the current step:
-            x[n].className += " active";
-        }
+ 
     </script>
     </body>
 </html>
