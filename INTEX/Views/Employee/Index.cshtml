@@ -56,7 +56,7 @@
                     <img class="img-responsive" src="~/Content/img/calendar.gif" alt="">
                     <figcaption>
                         <h5>Test Schedule</h5>
-                        <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">View Calendar</a>
+                        <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">View sCalendar</a>
                     </figcaption><!-- /figcaption -->
                 </figure><!-- /figure -->
             </div><!-- /grid-mask -->
@@ -237,6 +237,20 @@
                                     newsrc3 = "png";
                                 }
                             }
+
+                            function close_me() {
+                                document.getElementById("myModal2").style.visibility = "hidden";
+                            }
+
+                            function show_me() {
+                                document.getElementById("myModal2").style.visibility = "initial";
+                            }
+
+                            function update_price() {
+                                var textnode = document.createTextNode(" Price has been updated!")
+                                document.getElementById("priceupdate").appendChild(textnode);
+                            }
+
                         </script>
 
                         <table>
@@ -265,7 +279,7 @@
                                 <td>#1236</td>
                                 <td>12/07/17</td>
                                 <td>67</td>
-                                <td><button type="button" class="btn btn-info btn-block">Update Price</button></td>
+                                <td><a data-toggle="modal" href="#myModal3"><button type="button" class="btn btn-info btn-block" onclick="close_me()">Update Price</button></a></td>
                                 <td><button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo2">Update Status</button></td>
                             </tr>
                         </table>
@@ -278,6 +292,41 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
+
+        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-tracking">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" onclick="show_me()" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Orders Assigned to You</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <!--Order Number, Date Test Submitted, Assay-->
+                        
+                            <div class="row">
+                                <h1 class="text-center">Test #1236</h1>
+                            </div>
+                            <h6 class="text-center" >Update price to: <input class="text-center" type="text" id="fname" name="firstname" placeholder="Price change" onclick="update_complete()"><button onclick="update_price()">Submit</button></h6> 
+                            <p id="priceupdate" class="text-center"></p>
+                            </div>
+     
+                    </div><!-- /.modal-content -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="show_me()" >Close</button>
+                    </div>
+                
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        </div>
+           
+
     </div><!--row-->
 </div><!--container-->
 
+
+
+
+<script>
+
+</script>
