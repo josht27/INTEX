@@ -232,8 +232,9 @@
     <Content Include="Content\img\portfolio\folio08.jpg" />
     <Content Include="Content\img\portfolio\folio09.jpg" />
     <Content Include="Content\img\quote.gif" />
-    <Content Include="Content\img\science.jpg" />
+    <Content Include="Content\img\science-bg.png" />
     <Content Include="Content\img\science1.jpg" />
+    <Content Include="Content\img\single-flask-bw.png" />
     <Content Include="Content\img\single-flask-cropped.gif" />
     <Content Include="Content\img\single-flask.gif" />
     <Content Include="Content\img\skillsoft_icon_quote.gif" />
