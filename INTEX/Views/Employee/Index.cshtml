@@ -129,46 +129,144 @@
         a modal for each of your projects. -->
 
         <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-tracking">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Orders Assigned to You</h4>
                     </div>
+
                     <div class="modal-body">
                         <!--Order Number, Date Test Submitted, Assay-->
-                        <br>
                         <div id="demo" class="collapse">
                             <div class="row">
+                                <h1 class="text-center">Test #1234</h1>
                                 <div class="col-md-3">
                                     <h5 class="text-center">Work Order Recieved</h5>
-                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage()" name="pic" id="pic" /><br />
                                 </div>
 
                                 <div class="col-md-3">
                                     <h5 class="text-center">Materials Received</h5>
-                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage1()" name="pic1" id="pic1" /><br />
                                 </div>
 
                                 <div class="col-md-3">
                                     <h5 class="text-center">Testing in Progress</h5>
-                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage2()" name="pic2" id="pic2" /><br />
                                 </div>
 
                                 <div class="col-md-3">
                                     <h5 class="text-center">Testing is Complete</h5>
-                                    <img src="~/Content/img/single-flask-cropped.gif" class="img1 & img-responsive" onclick="changeMe(this)" /><br />
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage3()" name="pic3" id="pic3" /><br />
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div id="demo1" class="collapse">
+                            <div class="row">
+                                <h1 class="text-center">Test #1235</h1>
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Work Order Recieved</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage()" name="pic" id="pic" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Materials Received</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage1()" name="pic1" id="pic1" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Testing in Progress</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage2()" name="pic2" id="pic2" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Testing is Complete</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage3()" name="pic3" id="pic3" /><br />
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div id="demo2" class="collapse">
+                            <div class="row">
+                                <h1 class="text-center">Test #1236</h1>
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Work Order Recieved</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage()" name="pic" id="pic" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Materials Received</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage1()" name="pic1" id="pic1" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Testing in Progress</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage2()" name="pic2" id="pic2" /><br />
+                                </div>
+
+                                <div class="col-md-3">
+                                    <h5 class="text-center">Testing is Complete</h5>
+                                    <img src="~/Content/img/single-flask-bw.png" class="img-responsive" onclick="changeImage3()" name="pic3" id="pic3" /><br />
                                 </div>
                             </div>
                             <br>
                         </div>
 
                         <script>
-                            function changeMe(oImg) {
-                                if (oImg.className == 'img1 & img-responsive') {
-                                    oImg.className = 'color & img-responsive';
-                                } else {
-                                    oImg.className = 'img1 & img-responsive';
+                            var newsrc = "png";
+                            function changeImage() {
+                                if (newsrc == "png") {
+                                    document.images["pic"].src = '/Content/img/single-flask-bw.png';
+                                    document.images["pic"].alt = '/Content/img/single-flask-bw.png';
+                                    newsrc = "gif";
+                                }
+                                else {
+                                    document.images["pic"].src = '/Content/img/single-flask-cropped.gif';
+                                    document.images["pic"].alt = '/Content/img/single-flask-cropped.gif';
+                                    newsrc = "png";
+                                }
+                            }
+                            var newsrc1 = "png";
+                            function changeImage1() {
+                                if (newsrc1 == "png") {
+                                    document.images["pic1"].src = '/Content/img/single-flask-bw.png';
+                                    document.images["pic1"].alt = '/Content/img/single-flask-bw.png';
+                                    newsrc1 = "gif";
+                                }
+                                else {
+                                    document.images["pic1"].src = '/Content/img/single-flask-cropped.gif';
+                                    document.images["pic1"].alt = '/Content/img/single-flask-cropped.gif';
+                                    newsrc1 = "png";
+                                }
+                            }
+                            var newsrc2 = "png";
+                            function changeImage2() {
+                                if (newsrc2 == "png") {
+                                    document.images["pic2"].src = '/Content/img/single-flask-bw.png';
+                                    document.images["pic2"].alt = '/Content/img/single-flask-bw.png';
+                                    newsrc2 = "gif";
+                                }
+                                else {
+                                    document.images["pic2"].src = '/Content/img/single-flask-cropped.gif';
+                                    document.images["pic2"].alt = '/Content/img/single-flask-cropped.gif';
+                                    newsrc2 = "png";
+                                }
+                            }
+                            var newsrc3 = "png";
+                            function changeImage3() {
+                                if (newsrc3 == "png") {
+                                    document.images["pic3"].src = '/Content/img/single-flask-bw.png';
+                                    document.images["pic3"].alt = '/Content/img/single-flask-bw.png';
+                                    newsrc3 = "gif";
+                                }
+                                else {
+                                    document.images["pic3"].src = '/Content/img/single-flask-cropped.gif';
+                                    document.images["pic3"].alt = '/Content/img/single-flask-cropped.gif';
+                                    newsrc3 = "png";
                                 }
                             }
                         </script>
@@ -178,25 +276,29 @@
                                 <th>Order Number</th>
                                 <th>Date Test Submitted</th>
                                 <th>Assay ID</th>
+                                <th>Price</th>
                                 <th>Check Your Current Status</th>
                             </tr>
                             <tr>
                                 <td>#1234</td>
                                 <td>12/01/17</td>
                                 <td>50</td>
-                                <td><button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo">Update Status</button></td>
+                                <td>$30</td>
+                                <td><button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo">Check Status</button></td>
                             </tr>
                             <tr>
                                 <td>#1235</td>
                                 <td>12/04/17</td>
                                 <td>94</td>
-                                <td><button type="button" class="btn btn-info btn-block" " data-toggle="collapse" data-target="#demo">Update Status</button></td>
+                                <td>$28</td>
+                                <td><button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo1">Check Status</button></td>
                             </tr>
                             <tr>
                                 <td>#1236</td>
                                 <td>12/07/17</td>
                                 <td>67</td>
-                                <td><button type="button" class="btn btn-info btn-block" " data-toggle="collapse" data-target="#demo">Update Status</button></td>
+                                <td>$32</td>
+                                <td><button type="button" class="btn btn-info btn-block" data-toggle="collapse" data-target="#demo2">Check Status</button></td>
                             </tr>
                         </table>
                     </div>
