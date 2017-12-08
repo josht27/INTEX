@@ -27,6 +27,12 @@
             box-sizing: border-box;
         }
 
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
         body {
             background-color: #f1f1f1;
         }
@@ -582,17 +588,10 @@
 
         <br>
         <br>
-             
-        <!-- ==== SECTION DIVIDER4 ==== -->
-        <section class="section-divider textdivider divider4">
-            <div class="container">
-                <h1>DESIGN CREATES EMOTIONAL CONNECTION</h1>
-                <hr>
-                <p>There’s more to design than meets the eye. It’s when it meets the heart that design creates a meaningful, lasting connection with the audience.</p>
-            </div><!-- container -->
-        </section><!-- section -->
         
         <!-- ==== SECTION DIVIDER6 ==== -->
+        <h1>CONTACT INFORMATION</h1>
+        <hr>
         <section class="section-divider textdivider divider6">
             <div class="container">
                 <h1>SEATTLE, WASHINGTON • USA</h1>
@@ -609,29 +608,35 @@
                 <hr>
                 <br>
                 <br>
+            </div>
+            <div class="row">
+ 
+                <div class="col-md-8">
+                    <div class="container">
+                        <h2>Let us know</h2>
+                        <form>
+                            <input type="text" id="fname" name="firstname" placeholder="First Name">
 
+                            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                            <br />
+                            <input type="tel" id="phone" name="phone" placeholder="Phone" style="width:100%;">
 
-                <div class="col-lg-4">
-                    <h3>Contact Information</h3>
-                    <p>
-                        <span class="icon icon-home"></span> Some Address 987, NY<br />
-                        <span class="icon icon-phone"></span> +34 9884 4893 <br />
-                        <span class="icon icon-mobile"></span> +34 59855 9853 <br />
-                        <span class="icon icon-envelop"></span> <a href="#"> agency@blacktie.co</a> <br />
-                        <span class="icon icon-twitter"></span> <a href="#"> </a> <br />
-                        <span class="icon icon-facebook"></span> <a href="#"> BlackTie Agency </a> <br />
-                    </p>
-                    <h4>Michele Lampa</h4>
-                    <h5>Published Aug 28.</h5>
+                            <input type="email" id="email" name="email" placeholder="Your Email" style="width:100%;">
+                            <br />
+                            </form>
+                        <form>
+                            <textarea id="subject" name="subject" placeholder="Your Account Number(s)..." style="height:200px; width:200%"></textarea>
+                            <textarea id="subject" name="subject" placeholder="Your comments..." style="height:200px; width:200%"></textarea>
+                            <br />
+                            <input class="text-center" type="submit" value="Submit" >
+                   
+                    </form>
+
                 </div>
-                <div class="col-lg-8 blog-content">
-                    <h2>A Beautiful Story</h2>
-                    <p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-                    <p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client’s brand.</p>
-                    <p><a href="#" class="icon icon-link"> Read More</a></p>
-                    <br>
-                </div>
+ 
             </div><!-- /row -->
+
+     </div>
             <br>
             <br>
         </div><!-- /container -->
