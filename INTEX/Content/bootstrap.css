@@ -5222,6 +5222,10 @@ button.close {
     width: 650px;
     margin: 30px auto;
   }
+  .modal-medium {
+      width: 700px;
+      margin: 30px auto;
+  }
 }
 .tooltip {
   position: absolute;
