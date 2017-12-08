@@ -1,160 +1,871 @@
 ﻿
-@{
-    ViewBag.Title = "Calendar";
-}
 
- <head>
+
+
+
+
+<!doctype html>
+<html ng-app="Reports" lang=en class=museo-loaded>
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="locale" content="en">
+    <meta name="hf" content="2.6.6">
+    <meta name="allLocales" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="msapplication-config" content="none" />
+
+
+    <meta name="apple-itunes-app" content="app-id=885982973">
+
+
+
+    <meta name="description" content="Discover your family history. Explore the world’s largest collection of free family trees, genealogy records and resources.">
+
+
+
+
+
+    <link href="https://edge.fscdn.org/assets/docs/fs_logo_favicon_sq.png" rel="icon" type="image/x-icon" />
+
+
+    <link rel="apple-touch-icon" href="/tree-touch-icon.png" />
+
+
+
+    <title>Reports — FamilySearch.org</title>
+
+
+
+
+
+    <!-- Hides an element on DOM render to prevent Flash of Unstyled Content -->
+    <!-- Class "defer-show" hides element on page render. Set element to 'display:show' inside page's css -->
     <style>
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-        .img1 {
-            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-            filter: grayscale(100%);
+        .defer-show {
+            display: none
         }
-/* Modal Content */
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-/* Add Animation */
-@@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-
-@@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-
-/* The Close Button */
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
     </style>
+
+    <script src="https://edge.fscdn.org/assets/js/clientManifest-decb476b0c3f58aecc25e5fe66989448.js"></script>
+
+
+    <script src="https://edge.fscdn.org/assets/components/hf/assets/js/fs/fs-cf72ecf62c999e22e44969d8fb43bf6e.js"></script>
+
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/components/bootstrap/docs/assets/css/bootstrap-c44bc608b298193253159e38ee117a10.css" />
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/components/bootstrap/docs/assets/css/bootstrap-responsive-8653d9a0fd057aa073e87ab7d51c7c8c.css" />
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/components/fs-styles/dist/familysearch-styles-8d168f994d8cf36c6f8a7294d50fdb69.css" media="all" />
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/components/hf/assets/css/hf/hf-0fafeb72a0d1345a087ae299014e2c4a.css" media="all" />
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/components/hf/assets/css/hf/hf-responsive-572ca6c0f4c8bd683b161d717665174e.css" media="all" />
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/css/indexing-shared-f30bf50dd3ee2d76c621999e5d6555b8.css" />
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/css/reports-c7134d07d8a50213d9d3f623bcf14c38.css" />
+
+    <link rel="stylesheet" href="https://edge.fscdn.org/assets/components/idx-shared-components/assets/css/secondary-nav-76f9f200e6171248cb704d7f1a7dbb1c.css" />
+
+    <script src="https://edge.fscdn.org/assets/components/babel-helpers/babel-helpers-bf96b581ca835ac15615d04931811705.js"></script>
+
+
 </head>
-<body>
 
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-    <a id="myBtn"> <img src="~/Content/img/black-bg.jpg" /> </a>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Modal Header</h2>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="~/Content/img/iphone.png" class="img1 & img-responsive" />
-                    </div>
+<body id="pagekey__indexing__reportseb7ef497_2548_4aca_8945_f6e1e7252ed9" class="env-production ">
 
 
+    <div id="wrapper" class="">
+    
 
-                    <div class="col-md-3">
-                        <img src="~/Content/img/iphone.png" class="img1 & img-responsive" />
-                    </div>
+        <header id="global-header" class="logged-in">
+            <!-- Upper Navigation -->
+
+
+            <a href="#main-content-section" class="sr-offscreen skip-navigation-link">Skip main navigation</a>
+
+            <div class="primary-nav-wrapper">
+
+
+                <h1 class="logo-container">
+                    <a class="logo" href="/" data-test="header-logo" data-component="AdobeLinkTracker" data-config='{"type": "o", "name": "li_hdr_logo"}'>
+                        <span class="sr-only">Family Search</span>
+                    </a>
+                </h1>
 
 
 
-                    <div class="col-md-3">
-                        <img src="~/Content/img/iphone.png" class="img3 & img-responsive" />
-                    </div>
 
+                <div class="mobile-drawer-menu">
+                    <nav id="mobile-top-nav">
+                        <ul id="mobile-top-list">
+                            <li class="mobile-top-item ">
+                                <a class="logo-mobile mobile-top-link" href="/" data-test="header-mobile-logo" data-component="AdobeLinkTracker"
+                                   data-config="li_hdr_mobile_logo"><span class="sr-only">Family Search</span><span>Home</span></a>
+                            </li>
 
+                            <li class="mobile-top-item ">
+                                <a href="/tree/pedigree" id="mt-frontier-tree" class="mobile-top-link" data-test="header-mobiletopnav-tree" data-component="AdobeLinkTracker" data-config="mt-li_hdr_tree">
+                                    <span class="mobile-top-text">Tree</span>
+                                </a>
+                            </li>
 
-                    <div class="col-md-3">
-                        <img src="~/Content/img/iphone.png" class="img1 & img-responsive" />
-                    </div>
+                            <li class="mobile-top-item ">
+                                <a href="/search" id="mt-search" class="mobile-top-link" data-test="header-mobiletopnav-search" data-component="AdobeLinkTracker" data-config="mt-li_hdr_srch">
+                                    <span class="mobile-top-text">Search</span>
+                                </a>
+                            </li>
+
+                            <li class="mobile-top-item ">
+                                <a href="/photos/" id="mt-memories" class="mobile-top-link" data-test="header-mobiletopnav-photos" data-component="AdobeLinkTracker" data-config="mt-li_hdr_photos">
+                                    <span class="mobile-top-text">Memories</span>
+                                </a>
+                            </li>
+
+                            <li class="mobile-top-item  active">
+                                <a href="/indexing/" id="mt-indexing" class="mobile-top-link" data-test="header-mobiletopnav-indexing" data-component="AdobeLinkTracker" data-config="mt-li_hdr_indexing">
+                                    <span class="mobile-top-text">Indexing</span>
+                                </a>
+                            </li>
+
+                            <li class="mobile-top-item nav-temple-link hf-hide">
+                                <a href="/temple/all" id="mt-temple" class="mobile-top-link" data-test="header-mobiletopnav-temple" data-component="AdobeLinkTracker" data-config="mt-li_hdr_temple">
+                                    <span class="mobile-top-text">Temple</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <div class="mobile-top-item">
+                            <button class="mobile-drawer-button hamburger-icon mobile-top-link" aria-expanded="false" aria-haspopup="true" aria-controls="mobile-drawer" aria-owns="mobile-drawer" data-test="header-mobiletopnav-more" data-component="AdobeLinkTracker" data-config="li_mt_more">
+                                <span id="hf-hamburger-badge" class="red-badge red-dot hf-hide"></span>
+                                <span class="hamburger-label mobile-top-text">More<span class="sr-only"> menu items</span></span>
+                            </button>
+                        </div>
+                    </nav>
                 </div>
 
+             
+        </header>
+
+
+        <div id="consent_blackbar"></div>
+
+
+        <main id="main-content-section" class="app-indexing">
+
+            
+                    <section class="social-page-header">
+                      
+                        <div class="content-center">
+                            <h2 class="text-center">Reports</h2>
+                        </div>
+                    </section>
+
+                    <div class="reports-view row-fluid">
+                        <!--  Side Panel starts-->
+                        <div class="span4 idx-filter-panel">
+                            <div ng-form name="reportFilterForm">
+                                <div ng-if="reportsManager.savedFiltersList.length > 0" class="filter-section filter-section-saved-filters">
+                                    <h5 class="filter-title"> Saved Filters</h5>
+                                    <ul>
+                                        <li ng-repeat="filter in reportsManager.savedFiltersList track by $index" class="row-fluid">
+                                            <div class="btn-group pull-right filter-options">
+                                                <span class="caret" data-toggle="dropdown"></span>
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li>
+                                                        <a href="#" ng-click="handleEditSavedFilterClick(filter)">
+                                                            Rename Filter
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" ng-click="handleDeleteSavedFilterClick(filter)">
+                                                            Delete Filter
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" ng-click="handleApplySavedFilter(filter)" class="pull-left saved-filter-name"> {{filter.name}} </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter-section">
+                                    <ul>
+                                        <li>
+                                            <h5 class="filter-title">Report</h5>
+                                            <select ng-model="reportsManager.reportData.reportType" ng-change="handleReportChange()" class="input-block-level">
+                                                <option ng-selected="{{report.key === reportsManager.reportData.reportType}}"
+                                                        ng-repeat="report in reportsList" value="{{report.key}}">
+                                                    {{report.label}}
+                                                </option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section" ng-if="reportsManager.reportData.reportType === 'ORGANIZATION'">
+                                    <ul>
+                                        <!-- Include -->
+                                        <li>
+                                            <h5 class="filter-title">Include</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeGroupMembers" />
+                                                        Group Members
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeSubGroupMembers"
+                                                               ng-click="reportsManager.reportData.sortBySubGroup = false;" />
+                                                        Subgroup Members
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.sortBySubGroup"
+                                                               ng-disabled="!reportsManager.reportData.includeSubGroupMembers" />
+                                                        Show Subgroups
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Group Members -->
+                                        <li ng-if="reportsManager.isCmisGroup">
+                                            <h5 class="filter-title">Group Members</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isSystemAssignedGroupMembers" />
+                                                        Unit Members
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isGeneralGroupMembers" />
+                                                        Additional Members
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Sort Order -->
+                                        <li>
+                                            <h5 class="filter-title">Sort Order</h5>
+                                            <select ng-model="reportsManager.reportData.sortOrderByField" class="input-block-level">
+                                                <option value="GROUP_NAME"> Group Name </option>
+                                                <option value="INDEXED"> Indexed Records </option>
+                                                <option value="REVIEWED"> Reviewed Records </option>
+                                                <option value="ARBITRATED"> Arbitrated Records </option>
+                                            </select>
+                                        </li>
+
+                                        <li>
+                                            <select ng-model="reportsManager.reportData.sortDirection" class="input-block-level">
+                                                <option value="ASCENDING"> Ascending </option>
+                                                <option value="DESCENDING"> Descending </option>
+                                            </select>
+                                        </li>
+
+                                        <!-- Range -->
+                                        <li>
+                                            <h5 class="filter-title">Range</h5>
+                                            <select ng-model="reportsManager.reportData.range" ng-change="handleRangeValueChange()" class="input-block-level">
+                                                <option value="YEARLY" selected> Annual </option>
+                                                <option value="QUARTERLY"> Quarterly </option>
+                                                <option value="MONTHLY"> Monthly </option>
+                                                <option value="DAILY"> Custom </option>
+                                            </select>
+                                        </li>
+
+                                        <li>
+                                            <!-- Date -->
+                                            <h5 class="filter-title">Date</h5>
+                                            <div ng-if="reportsManager.reportData.range !== 'DAILY'">
+                                                <select ng-model="reportsManager.reportData.date" class="input-block-level">
+                                                    <option ng-if="reportsManager.reportData.range == 'YEARLY'"
+                                                            value="CURRENT_YEAR">
+                                                        Current Year
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range == 'YEARLY'" value="LAST_YEAR">
+                                                        Last Year
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'QUARTERLY'"
+                                                            value="CURRENT_QUARTER">
+                                                        Current Quarter
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'QUARTERLY'" value="LAST_QUARTER">
+                                                        Last Quarter
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'MONTHLY'"
+                                                            value="CURRENT_MONTH">
+                                                        Current Month
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'MONTHLY'" value="LAST_MONTH">
+                                                        Last Month
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="row-fluid" ng-if="reportsManager.reportData.range === 'DAILY'">
+                                                <ul class="selector-list">
+                                                    <li>
+                                                        <input type="text"
+                                                               idx-date-validator
+                                                               name="fromDate"
+                                                               class="form-control input-block-level"
+                                                               ng-class="reportFilterForm.fromDate.$error.isInvalidDate ? 'invalid-date' : ''"
+                                                               datepicker-popup="MM/dd/yyyy"
+                                                               ng-model="reportsManager.reportData.fromDate"
+                                                               close-text=Close
+                                                               current-text=Today
+                                                               clear-text=Clear
+                                                               show-weeks="false" />
+                                                        <span class="errorMessage" ng-if="reportFilterForm.fromDate.$error.isInvalidDate"> Enter a valid date: MM/DD/YYYY </span>
+                                                    </li>
+                                                    <li>
+                                                        <input type="text"
+                                                               idx-date-validator
+                                                               name="toDate"
+                                                               class="form-control input-block-level"
+                                                               ng-class="reportFilterForm.toDate.$error.isInvalidDate ? 'invalid-date' : ''"
+                                                               datepicker-popup="MM/dd/yyyy"
+                                                               ng-model="reportsManager.reportData.toDate"
+                                                               close-text=Close
+                                                               current-text=Today
+                                                               clear-text=Clear
+                                                               show-weeks="false" />
+                                                        <span class="errorMessage" ng-if="reportFilterForm.toDate.$error.isInvalidDate"> Enter a valid date: MM/DD/YYYY </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section" ng-if="reportsManager.reportData.reportType === 'DIRECTORY'">
+                                    <ul>
+                                        <!-- Include -->
+                                        <li>
+                                            <h5 class="filter-title">Include</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeGroupMembers" />Group Members
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeSubGroupMembers"
+                                                               ng-click="reportsManager.reportData.sortBySubGroup = false;" />Subgroup Members
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.sortBySubGroup"
+                                                               ng-disabled="reportsManager.reportData.includeGroupName || !reportsManager.reportData.includeSubGroupMembers" />Show Subgroups
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Group Members -->
+                                        <li ng-if="reportsManager.isCmisGroup">
+                                            <h5 class="filter-title">Group Members</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isSystemAssignedGroupMembers" />Unit Members
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isGeneralGroupMembers" />Additional Members
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Columns -->
+                                        <li>
+                                            <h5 class="filter-title">Columns</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeContactName" />Contact Name
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeDisplayName" />Display Name
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeGroupName" ng-disabled="reportsManager.reportData.sortBySubGroup" />Group Name
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includePhone" />Phone
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeEmailAddress" />Email Address
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeRoles" />Roles
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Sort Order -->
+                                        <li>
+                                            <h5 class="filter-title">Sort Order</h5>
+                                            <select ng-model="reportsManager.reportData.sortOrderByField" ng-selected="findSortOrderSelection()" class="input-block-level">
+                                                <option value="CONTACT_NAME" ng-if="reportsManager.reportData.includeContactName"> Contact Name </option>
+                                                <option value="DISPLAY_NAME" ng-if="reportsManager.reportData.includeDisplayName"> Display Name </option>
+                                                <option value="GROUP_NAME" ng-if="reportsManager.reportData.includeGroupName"> Group Name </option>
+                                                <option value="ROLES" ng-if="reportsManager.reportData.includeRoles"> Roles </option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select ng-model="reportsManager.reportData.sortDirection" class="input-block-level">
+                                                <option value="ASCENDING"> Ascending </option>
+                                                <option value="DESCENDING"> Descending </option>
+                                            </select>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="contributor-groups filter-section" ng-if="reportsManager.reportData.reportType === 'CONTRIBUTOR'">
+                                    <ul>
+                                        <li>
+                                            <!-- Include -->
+
+                                        <li>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeSubGroupMembers"
+                                                               ng-click="reportsManager.reportData.sortBySubGroup = false;" />
+                                                        Organize Report by Subgroups
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.paginateSubgroups" />
+                                                        New Page For Each Subgroup
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <h5 class="filter-title">Include</h5>
+                                            <ul class="selector-list">
+                                                <li ng-if="reportsManager.isCmisGroup">
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isSystemAssignedGroupMembers" />Default Members
+                                                    </label>
+                                                </li>
+                                                <li ng-if="reportsManager.isCmisGroup">
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isGeneralGroupMembers" />Manually Added Members
+                                                    </label>
+                                                </li>
+                                                <hr ng-if="reportsManager.isCmisGroup">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isContributors" />
+                                                        Contributors
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.isNonContributors" />
+                                                        Non Contributors
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- Sort Order -->
+                                        <li>
+                                            <h5 class="filter-title">Sort Order</h5>
+                                            <select ng-model="reportsManager.reportData.sortOrderByField" class="input-block-level">
+                                                <option value="CONTACT_NAME">Contact Name</option>
+                                                <option value="INDEXED">Indexed Records</option>
+                                                <option value="REVIEWED">Reviewed Records</option>
+                                                <option value="ARBITRATED">Arbitrated Records</option>
+                                                <!-- <option value="REWORKED">Reworked Batches</option> COMMENT OUT FOR NOW-->
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select ng-model="reportsManager.reportData.sortDirection" class="input-block-level">
+                                                <option value="ASCENDING">Ascending</option>
+                                                <option value="DESCENDING">Descending</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <h5 class="filter-title">Range</h5>
+                                            <select ng-model="reportsManager.reportData.range" ng-change="handleRangeValueChange()" class="input-block-level">
+                                                <option value="YEARLY" selected> Annual </option>
+                                                <option value="QUARTERLY"> Quarterly </option>
+                                                <option value="MONTHLY"> Monthly </option>
+                                                <option value="DAILY"> Custom </option>
+                                            </select>
+                                        </li>
+
+                                        <!-- Range -->
+                                        <li>
+                                            <h5 class="filter-title">Date</h5>
+                                            <div ng-if="reportsManager.reportData.range !== 'DAILY'">
+                                                <select ng-model="reportsManager.reportData.date" class="input-block-level">
+                                                    <option ng-if="reportsManager.reportData.range == 'YEARLY'"
+                                                            value="CURRENT_YEAR">
+                                                        Current Year
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range == 'YEARLY'" value="LAST_YEAR">
+                                                        Last Year
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'QUARTERLY'"
+                                                            value="CURRENT_QUARTER">
+                                                        Current Quarter
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'QUARTERLY'" value="LAST_QUARTER">
+                                                        Last Quarter
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'MONTHLY'"
+                                                            value="CURRENT_MONTH">
+                                                        Current Month
+                                                    </option>
+                                                    <option ng-if="reportsManager.reportData.range === 'MONTHLY'" value="LAST_MONTH">
+                                                        Last Month
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="row-fluid" ng-if="reportsManager.reportData.range === 'DAILY'">
+                                                <ul class="selector-list">
+                                                    <li>
+                                                        <input type="text"
+                                                               idx-date-validator
+                                                               name="fromDate"
+                                                               class="form-control input-block-level"
+                                                               ng-class="reportFilterForm.fromDate.$error.isInvalidDate ? 'invalid-date' : ''"
+                                                               datepicker-popup="MM/dd/yyyy"
+                                                               ng-model="reportsManager.reportData.fromDate"
+                                                               close-text=Close
+                                                               current-text=Today
+                                                               clear-text=Clear
+                                                               show-weeks="false" />
+                                                        <span class="errorMessage" ng-if="reportFilterForm.fromDate.$error.isInvalidDate"> Enter a valid date: MM/DD/YYYY </span>
+                                                    </li>
+                                                    <li>
+                                                        <input type="text"
+                                                               idx-date-validator
+                                                               name="toDate"
+                                                               class="form-control input-block-level"
+                                                               ng-class="reportFilterForm.toDate.$error.isInvalidDate ? 'invalid-date' : ''"
+                                                               datepicker-popup="MM/dd/yyyy"
+                                                               ng-model="reportsManager.reportData.toDate"
+                                                               close-text=Close
+                                                               current-text=Today
+                                                               clear-text=Clear
+                                                               show-weeks="false" />
+                                                        <span class="errorMessage" ng-if="reportFilterForm.toDate.$error.isInvalidDate"> Enter a valid date: MM/DD/YYYY </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section" ng-if="reportsManager.reportData.reportType === 'STATUS'">
+                                    <ul>
+                                        <li>
+                                            <!-- Include -->
+                                        <li>
+                                            <h5 class="filter-title">Include</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeBatches" />Batches
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeImages" />Images
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeRecords" />Records
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeImagesets" />Image Sets
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <hr />
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.groupByImageSets" />Group by Image Set
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section" ng-if="reportsManager.reportData.reportType === 'BURNDOWN'">
+                                    <ul>
+                                        <li>
+                                            <!-- Include -->
+                                        <li>
+                                            <h5 class="filter-title">Include</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="radio" name="includeFeilds" ng-model="reportsManager.reportData.category" value="BATCHES" />Batches
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="radio" name="includeFeilds" ng-model="reportsManager.reportData.category" value="BATCHING" />Batching
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <hr />
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeBurnLineChart" />Burn Line Chart
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeProjectStatus" />Project Status
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <hr />
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.groupByImageSets" />Group by Image Set
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section" ng-if="reportsManager.reportData.reportType === 'DASHBOARD'">
+                                    <ul>
+                                        <li>
+                                            <!-- Include -->
+                                        <li>
+                                            <h5 class="filter-title">Include</h5>
+                                            <ul class="selector-list">
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeProjectStatus" />Project Status
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" ng-model="reportsManager.reportData.includeBurnLineChart" />Burndown
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section" ng-if="reportsManager.isProjectReport">
+                                    <ul>
+                                        <!-- Project Start Date -->
+                                        <li>
+                                            <h5 class="filter-title">Project Start</h5>
+                                            <input type="text"
+                                                   name="fromDate"
+                                                   idx-date-validator
+                                                   class="form-control input-block-level"
+                                                   ng-class="reportFilterForm.fromDate.$error.isInvalidDate ? 'invalid-date' : ''"
+                                                   datepicker-popup="MM/dd/yyyy"
+                                                   ng-model="reportsManager.reportData.fromDate"
+                                                   close-text=Close
+                                                   current-text=Today
+                                                   clear-text=Clear
+                                                   show-weeks="false" />
+                                            <span class="errorMessage" ng-if="reportFilterForm.fromDate.$error.isInvalidDate"> Enter a valid date: MM/DD/YYYY </span>
+                                        </li>
+                                        <!-- Project End Date -->
+                                        <li>
+                                            <h5 class="filter-title">Target Completion</h5>
+                                            <input type="text"
+                                                   idx-date-validator
+                                                   name="toDate"
+                                                   class="form-control input-block-level"
+                                                   ng-class="reportFilterForm.toDate.$error.isInvalidDate ? 'invalid-date' : ''"
+                                                   datepicker-popup="MM/dd/yyyy"
+                                                   ng-model="reportsManager.reportData.toDate"
+                                                   close-text=Close
+                                                   current-text=Today
+                                                   clear-text=Clear
+                                                   show-weeks="false" />
+                                            <span class="errorMessage" ng-if="reportFilterForm.toDate.$error.isInvalidDate"> Enter a valid date: MM/DD/YYYY </span>
+                                        </li>
+                                        <!-- Project Status Chart Type -->
+                                        <li ng-if="(reportsManager.reportData.reportType === 'STATUS')">
+                                            <h5 class="filter-title">Chart</h5>
+                                            <select ng-model="reportsManager.reportData.chartType" class="input-block-level">
+                                                <option value="BAR"> Bar </option>
+                                                <option value="AREA"> Area </option>
+                                                <option value="BURNDOWN"> Burn Down </option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section">
+                                    <ul>
+                                        <!-- Format -->
+                                        <li>
+                                            <h5 class="filter-title">Format</h5>
+                                            <select ng-model="reportsManager.reportData.format" class="input-block-level">
+                                                <option value="HTML">HTML</option>
+                                                <option value="PDF">PDF</option>
+                                                <option value="CSV">CSV</option>
+                                                <option value="XLS">XLS</option>
+                                            </select>
+                                        </li>
+
+                                        <!-- Timezone -->
+                                        <li>
+                                            <h5 class="filter-title">Timezone</h5>
+                                            <div idx-time-zone selectedzone="reportsManager.reportData.timeZone"></div>
+                                        </li>
+
+                                        <!-- Notes -->
+                                        <li ng-if="!reportsManager.isProjectReport">
+                                            <h5 class="filter-title">Notes</h5>
+                                            <textarea ng-model="reportsManager.reportData.notes" maxlength="512" class="input-block-level"></textarea>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="filter-section report-actions">
+                                    <div>
+                                        <button class="fs-button fs-button--recommended" ng-click="handleGenerateReport()">
+                                            Generate Report
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button class="fs-button fs-button--secondary fs-icon-before download-button" ng-click="handleDownloadClick()">
+                                            Download
+                                        </button>
+                                    </div>
+                                    <p class="disclaimer">
+                                        Contributions can take up to 24 hours to be shown in reports.
+                                    </p>
+                                    <!-- <button class="fs-button fs-button--small fs-button--minor" ng-click="handleSaveFilterCriteria()"> Save Filter </button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--  Side Panel Ends-->
+
+
+                <div session-time-out-dir></div>
+
             </div>
-            <div class="modal-footer">
-                <h3>Modal Footer</h3>
+ 
+            <style>
+                [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                    display: none !important;
+                }
+            </style>
+
+
+</div>
+            
+
+
+
+
+        </main>
+
+
+
+        <footer id="global-footer" class="fullFooter">
+            <nav>
+
+                <a href="/home/about" class="" data-component="AdobeLinkTracker" data-config="li_ftr_home/about" data-test='footer-About'>
+                    About
+                </a>
+
+                <a href="/blog" class="" data-component="AdobeLinkTracker" data-config="li_ftr_blog" data-test='footer-Blog'>
+                    Blog
+                </a>
+
+                <a href="/feedback" class="helpFeedbackLink" data-component="AdobeLinkTracker" data-config="li_ftr_feedback" data-test='footer-Feedback'>
+                    Feedback
+                </a>
+
+                <a href="/site-map" class="" data-component="AdobeLinkTracker" data-config="li_ftr_site-map" data-test='footer-SiteMap'>
+                    Site Map
+                </a>
+
+                <a href="/apps" class="" data-component="AdobeLinkTracker" data-config="li_ftr_apps" data-test='footer-appGalleryLong'>
+                    App Gallery
+                </a>
+
+
+                <a id="teconsent" data-test="footer-CookiePreferences"></a>
+
+
+                <a class="langPicker" data-test="LanguagePicker" href="javascript:void(0)">
+                    Language
+                </a>
+
+            </nav>
+
+            <div class="copyright_notice">
+                <div class="privacy_usage">
+                    <a href="/terms" data-test="footer-rights-of-use" data-component="AdobeLinkTracker" data-config="ftr_rights">FamilySearch Rights and Use Information</a> (Updated 2/3/2015) | <a href="/privacy" data-test="footer-privacy_policy" data-component="AdobeLinkTracker" data-config="ftr_privacy">Privacy Policy</a> (Updated 3/18/2014)
+                </div>
+                © 2017 by Intellectual Reserve, Inc. All rights reserved.
+                <span class="service-by-link">
+                    A service provided by <a href="http://mormon.org" data-component="AdobeLinkTracker" data-test="footer-service-by-link" data-config='{"type": "e", "name": "ftr_srvcby"}'>The Church of Jesus Christ of Latter-day Saints</a>
+                </span>
             </div>
-        </div>
 
-    </div>
+        </footer>
 
-    <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
 
 </body>
 </html>
