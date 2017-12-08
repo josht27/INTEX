@@ -160,7 +160,7 @@
                                 <div class="container-fluid">
                                     <form id="regForm">
                                         <!-- One "tab" for each step in the form: -->
-                                        <div class="tab1 center-block text-center">
+                                        <div class="tab center-block text-center">
                                             <h1>Compound Information</h1>
                                             <hr>
                                             <br>
@@ -170,7 +170,7 @@
                                             <p><input placeholder="Quantity..." oninput="this.className = ''" name="lname"></p>
                                         </div>
 
-                                        <div class="tab1">
+                                        <div class="tab">
                                             <h1 class="text-center">Select Your Test(s)</h1>
                                             <hr>
                                             <br>
@@ -193,7 +193,7 @@
                                             <br>
                                         </div>
 
-                                        <div class="tab1 center-block text-center">
+                                        <div class="tab center-block text-center">
                                             <h1 class="text-center">Additional Comments:</h1>
                                             <hr>
                                             <br>
@@ -202,7 +202,7 @@
                                             <br>
                                         </div>
 
-                                        <div class="tab1">
+                                        <div class="tab">
                                             <hr>
                                             <br>
                                             <h1 class="text-center">Thank you for your business!</h1>
@@ -212,6 +212,20 @@
                                             <br>
                                         </div>
                                     </form>
+
+                                    <div id="trial" style="overflow:auto;">
+                                        <div style="float:right;">
+                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Circles which indicates the steps of the form: -->
+                                    <div style="text-align:center;margin-top:40px;">
+                                        <span class="step"></span>
+                                        <span class="step"></span>
+                                        <span class="step"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -248,7 +262,7 @@
                                 <div class="container-fluid">
                                     <form id="regForm">
                                         <!-- One "tab" for each step in the form: -->
-                                        <div class="tab center-block text-center">
+                                        <div class="tab1 center-block text-center">
                                             <h1>New Order</h1>
                                             <hr>
                                             <br>
@@ -258,7 +272,7 @@
                                             <p><input placeholder="Quantity..." oninput="this.className = ''" name="lname"></p>
                                         </div>
 
-                                        <div class="tab">
+                                        <div class="tab1">
                                             <h1 class="text-center">Select Your Test(s)</h1>
                                             <hr>
                                             <br>
@@ -281,7 +295,7 @@
                                             <br>
                                         </div>
 
-                                        <div class="tab center-block text-center">
+                                        <div class="tab1 center-block text-center">
                                             <h1 class="text-center">Date Test is Due</h1>
                                             <hr>
                                             <br>
@@ -296,7 +310,7 @@
                                             <br>
                                         </div>
 
-                                        <div class="tab center-block text-center">
+                                        <div class="tab1 center-block text-center">
                                             <h1 class="text-center">Additional Comments:</h1>
                                             <hr>
                                             <br>
@@ -305,7 +319,7 @@
                                             <br>
                                         </div>
 
-                                        <div class="tab">
+                                        <div class="tab1">
                                             <hr>
                                             <br>
                                             <h1 class="text-center">Thank you for your order!</h1>
@@ -314,21 +328,6 @@
                                             <br>
                                         </div>
                                     </form>
-
-                                    <div id="trial" style="overflow:auto;">
-                                        <div style="float:right;">
-                                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Circles which indicates the steps of the form: -->
-                                    <div style="text-align:center;margin-top:40px;">
-                                        <span class="step"></span>
-                                        <span class="step"></span>
-                                        <span class="step"></span>
-                                        <span class="step"></span>
-                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
