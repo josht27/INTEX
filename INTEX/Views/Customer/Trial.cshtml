@@ -1,88 +1,150 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+* {
+    box-sizing: border-box;
+}
 
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@@media (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+    </style>
+</head>
 <body>
-    <h2>Responsive Form</h2>
-    <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+    <h2>Reports</h2>
+    <h3>Filters</h3>
 
     <div class="container">
         <form action="/action_page.php">
             <div class="row">
                 <div class="col-25">
-                    <label for="fname">First Name</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">Last Name</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="country">Country</label>
+                    <label for="company">Company</label>
                 </div>
                 <div class="col-75">
                     <select id="country" name="country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
+                        <option value="placeholder">--- Company Name ---</option>
+                        <option value="1">Cooksey</option>
+                        <option value="2">Scienuvo</option>
+                        <option value="3">Aonomy</option>
+                        <option value="4">Elemensis</option>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="subject">Subject</label>
+                    <label for="start">Start Date</label>
                 </div>
                 <div class="col-75">
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <input type="text" id="start" name="startdate" placeholder="MM/YYYY">
                 </div>
             </div>
             <div class="row">
-                <input type="submit" value="Submit">
+                <div class="col-25">
+                    <label for="end">End Date</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="end" name="enddate" placeholder="MM/YYYY">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="type">Test Type</label>
+                </div>
+                <div class="col-75">
+                    <select id="type" name="testtype">
+                        <option value="placeholder">--- Test Name ---</option>
+                        <option value="1">Biochemical Pharmacology</option>
+                        <option value="2">DiscoveryScreen</option>
+                        <option value="3">ImmunoScreen</option>
+                        <option value="4">ProfilingScreen</option>
+                        <option value="5">PharmaScreen</option>
+                        <option value="6">CustomScreen</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="cost">Cost Range</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="cost" name="testcost" placeholder="Cost Range (ex. 100-300)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="cost">Number of Tests</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="number" name="number" placeholder="Number">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="end">Order Number (optional)</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="order" name="ordernumber" placeholder="ex. 143567">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Generate Report">
             </div>
         </form>
     </div>
 </body>
 </html>
-<!--<style>
 
-</style>
-
-
-<body>
-
-    <h1>Custom Radio Buttons</h1>
-    <div class="container">
-
-
-    <label ="container">
-            One
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-    </div>
-    <label class="container">
-        Two
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-    </label>
-
-    <label class="container">
-        Three
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-    </label>
-
-    <label class="container">
-        Four
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-    </label>
-
-</body>
-    -->
+<!--CustomerID, -->
